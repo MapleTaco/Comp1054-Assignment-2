@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/*  Student Name: Daniel Perusse
+    Student ID: 200551990
+    Student email: daniel.perusse@mygeorgian.ca
+    Date:March 15, 2024
+    COMP1054 - Assignment 2 
+*/
+
+/*set html font family, base text size, line height*/
+html {
+
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* add some padding like in the actual article */
+body {
+    padding: 20px 40px;
+}
+
+/* set the title size, remove other stylings and tighten the spacing */
+h1 {
+    font-size: 4.8rem;
+    font-style: normal;
+    text-transform: lowercase;
+    font-family: sans-serif;
+    font-weight: 800;
+    letter-spacing: -4px;
+}
+/* make the theater listings in the caroling section a little smaller */
+h3 {
+    font-size: 1rem;
+}
+/* capitalize the south central ontario text and give it some weight */
+header p {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* set the "home" in the title to red */
+h1 em {
+    font-style: inherit;
+    color:crimson;
+}
+
+/* set dog day afternoon article title to red, make it bigger, remove some weight */
+article:first-child > h2 {
+    font-size: 1.8rem;
+    color:crimson;
+    font-weight: 600;
+}
+
+/* make second article title much larger, skinier and remove the capitals*/
+article:first-child + article > h2 {
+    font-size: 3.4rem;
+    text-transform: lowercase;
+    font-weight: 350;
+}
+
+/* give back the capital on the first word of the second article title */
+article:first-child + article > h2::first-letter {
+    text-transform: uppercase;
+}
+
+/* second article text is in times new roman */
+article:first-child + article > p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* set the carolling section in red text, reduce text size a bit */
+aside > h2 {
+    color: crimson;
+    font-size: 1.2rem;
+}
+
+/* set footer text to lowercase, make it tiny */
+footer {
+    text-transform: lowercase;
+    font-size: .9rem;
+}
+
+/* abbreviation is in full capitals, and make it bold */
+footer abbr {
+    font-weight: 1000;
+    font-size: .5rem;
+    text-transform: uppercase;
+}
+
+/* em is for the page number, give it some weight and remove the styling */
+footer em {
+    font-style: normal;
+    font-weight: 750;
+    font-size: .8rem;
+}
