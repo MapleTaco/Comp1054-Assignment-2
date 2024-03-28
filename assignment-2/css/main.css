@@ -26,6 +26,10 @@ h1 {
     text-transform: lowercase;
     font-weight: 800;
     letter-spacing: -4px;
+    margin: 0;
+    /* move the title a bit to the left to better line up with the text */
+    position: relative;
+    right: 5px
 }
 /* make the theater listings in the caroling section a little smaller */
 h3 {
@@ -43,33 +47,64 @@ h1 em {
     color:crimson;
 }
 
+/* flip the first dog image and resize it smaller */
+img:first-child {
+    width: 200px;
+    transform: scaleX(-1);
+}
+
 /* set dog day afternoon article title to red, make it bigger, remove some weight */
 article:first-child > h2 {
     font-size: 1.8rem;
     color:crimson;
     font-weight: 600;
+    margin: 0;
+}
+
+/* remove the margin between article text and title */
+p {
+    margin:  0;
+}
+
+/* put some space between the image and the first article text and resize it */
+article + img {
+    margin-top: 60px;
+    width: 450px
 }
 
 /* make second article title much larger, skinier and remove the capitals*/
-article:first-child + article > h2 {
+img + article > h2 {
     font-size: 3.4rem;
     text-transform: lowercase;
     font-weight: 350;
+    margin: 0;
 }
 
 /* give back the capital on the first word of the second article title */
-article:first-child + article > h2::first-letter {
+img + article > h2::first-letter {
     text-transform: uppercase;
 }
 
 /* second article text is in times new roman */
-article:first-child + article > p {
+img + article > p {
     font-family: 'Times New Roman', Times, serif;
 }
 
 /* make the breast cancer article a bit bigger */
 article + aside > p {
     font-size: 1.2rem;
+}
+
+/* set the background for the carolling section and add some padding */
+aside + aside {
+    background-color: rgb(235, 235, 235);
+    padding: 25px;
+}
+
+/* change list element bullet to +, reduce the padding a bit */
+ul {
+    list-style-type: "+ ";
+    padding-left: 20px;
 }
 
 /* set the carolling section in red text, reduce text size a bit */
