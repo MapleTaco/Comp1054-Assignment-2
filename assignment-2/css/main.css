@@ -2,17 +2,17 @@
 /*  Student Name: Daniel Perusse
     Student ID: 200551990
     Student email: daniel.perusse@mygeorgian.ca
-    Date:March 15, 2024
+    Date:March 28, 2024
     COMP1054 - Assignment 2 
 */
 
-/*set html font family, base text size, line height*/
+/*set html font family, base text size, line height, background color*/
 html {
-    /* TODO: REMEMBER TO CHANGE THIS FONT SIZE AND IMG SIZES TO MAKE ARTICLE MORE LEGIBLE */
-    font-size: 1.2em;
-    line-height: 1.4;
+    font-size: 1.4em;
+    line-height: 1.6;
     /* entire newspaper is in sans-serif, save the second article */
     font-family: sans-serif;
+    background-color: gray;
 }
 
 /* add some padding like in the actual article */
@@ -20,6 +20,7 @@ body {
     padding: 20px 40px;
     width: 75%;
     margin: 0 auto 0 auto;
+    background-color: whitesmoke;
 }
 
 /* set the title size, remove other stylings and tighten the spacing */
@@ -32,7 +33,7 @@ h1 {
     margin: 0;
     /* move the title a bit to the left and up to better line up with the text */
     position: relative;
-    right: 5px;
+    right: 6px;
     bottom: 30px;
     /* set article title grid-area for header grid */
     grid-area: title;
@@ -40,6 +41,7 @@ h1 {
 /* make the theater listings in the caroling section a little smaller */
 h3 {
     font-size: 1rem;
+    margin: 0;
 }
 
 /* set header as a grid area to move south central ontario above title and position other elements */
@@ -48,6 +50,8 @@ header {
     grid-template-areas: 
             "place place place"
             "title title dog";
+    border-left: 1px;
+    border-left-style: solid;
 }
 
 /* capitalize the south central ontario text and give it some weight */
@@ -66,12 +70,13 @@ h1 em {
 
 /* flip the first dog image and resize it smaller */
 header > img {
-    width: 200px;
+    width: 300px;
     transform: scaleX(-1);
     /* added grid-area name for header grid */
     grid-area: dog;
 }
 
+/* setup the grid for main to line up main newspaper text */
 main {
     display: grid;
     grid-template-areas: 
@@ -83,10 +88,12 @@ main {
             "Carol Slopes Slopes";
 }
 
+/* add some padding to the articles to separate it more from the aside */
 article {
     padding-left: 50px;
 }
 
+/* set a grid-area name for the dog day article in main grid */
 article:first-child {
     grid-area: Afternoon;
 }
@@ -112,11 +119,11 @@ p {
 /* put some space between the image and the first article text and resize it */
 article + img {
     margin-top: 60px;
-    width: 450px;
     grid-area: Tuber;
     padding-left: 50px;
 }
 
+/* set up a grid-area name for the tubing article in main grid */
 img + article {
     grid-area: Slopes;
 }
@@ -141,21 +148,27 @@ img + article > p {
     hyphens: auto;
 }
 
+/* add some padding to breast cancer article and some borders and give it a grid name for main grid */
 article + aside {
     grid-area: Tubbs;
     padding: 0 30px 0 35px;
-    outline: auto;
+    border-right: 1px;
+    border-right-style: solid;
+    border-left: 1px;
+    border-left-style: solid;
 }
 
-/* make the breast cancer article a bit bigger */
+/* make the breast cancer article text a bit bigger */
 article + aside > p {
     font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* set the background for the carolling section and add some padding */
 aside + aside {
     background-color: rgb(235, 235, 235);
     padding: 25px;
+    /* give it a name for the grid-area for main */
     grid-area: Carol;
 }
 
@@ -169,6 +182,14 @@ ul {
 aside > h2 {
     color: crimson;
     font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* tighten up the listings and add padding on the bottom to better separate them */
+li {
+    line-height: 1.4;
+    padding-bottom: 15px;
 }
 
 /* set footer text to lowercase, make it tiny */
