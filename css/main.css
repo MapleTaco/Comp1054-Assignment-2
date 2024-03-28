@@ -70,7 +70,9 @@ h1 em {
 
 /* flip the first dog image and resize it smaller */
 header > img {
-    width: 300px;
+    width:250px;
+    position: relative;
+    bottom: 0px;
     transform: scaleX(-1);
     /* added grid-area name for header grid */
     grid-area: dog;
@@ -121,6 +123,7 @@ article + img {
     margin-top: 60px;
     grid-area: Tuber;
     padding-left: 50px;
+    width: 90%;
 }
 
 /* set up a grid-area name for the tubing article in main grid */
